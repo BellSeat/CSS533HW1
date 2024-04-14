@@ -84,7 +84,7 @@ Once a target is chosen, the player can opt to either steal values from or sabot
 
 ### UI/UX Design
 
-![Initial Design](./HeckGame.png "Initial Design")
+![Initial Design](./HackGame.png "Initial Design")
 
 ### Technical Architecture
 
