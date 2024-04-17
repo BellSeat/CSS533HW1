@@ -106,3 +106,7 @@ Unity may not invoke iOS Devices' GPS sensors, so that is the reason we may use 
 ### Interaction With AWS
 
 We have little experience with AWS, so we may meet many issues with we deploy a response server on AWS.
+
+# Initial Mockup
+
+![Initial Mockup](./Frame%2031.png "Initial Mockup")
