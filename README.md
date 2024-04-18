@@ -110,3 +110,18 @@ We have little experience with AWS, so we may meet many issues with we deploy a 
 # Initial Mockup
 
 ![Initial Mockup](./Frame%2031.png "Initial Mockup")
+
+### Happy Path
+
+For our game, the happy path would be:
+
+Open the app --> enter user credential --> click login --> 
+click one of the scan button --> click one of the action button --> 
+enter one of the battle page --> successfully solve the question --> 
+evaluation page to collect points --> back to world to look for more battles
+
+### Success Criteria
+For a mobile game, the success criteria will be points earned. The more a player's points are would mean 
+that the player has sucessfully played a lot of rounds of the game. 
+
+
