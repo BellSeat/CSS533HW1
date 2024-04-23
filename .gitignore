@@ -58,3 +58,4 @@ Packages/com.arcgis-maps-sdk/*
 .DS_Store*
 Thumbs.db
 Desktop.ini
+/Packages/com.esri.arcgis-maps-sdk
