@@ -54,6 +54,7 @@ crashlytics-build.properties
 **/assets/addressableassetsdata/*/*.bin*
 **/Assets/StreamingAssets/aa.meta
 **/assets/streamingassets/*/aa/*
+Packages/com.arcgis-maps-sdk/*
 .DS_Store*
 Thumbs.db
 Desktop.ini
