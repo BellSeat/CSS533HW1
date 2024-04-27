@@ -22,7 +22,7 @@ public class QuickScannerController : MonoBehaviour
     }
 
     public void Scan() { 
-        print("Scanning...");
+        Debug.Log("Scan Button Clicked");
         GameObject scanner = new GameObject();
         scanner.AddComponent<QuickScanner>();
         

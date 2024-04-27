@@ -8,13 +8,16 @@ public class PlayerFactory : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private GameObject playerList;
-    [SerializeField] private bool creatingPlayer = false;
     void Start()
     {
         playerPrefab = Resources.Load("Prefab/Player") as GameObject;
         
         // find a GameObject list playerlist in the scene
         playerList = GameObject.Find("PlayerList");
+
+        for (int i = 0; i <= 5; i++) { 
+            createPlayer();
+        }
     }
 
     // Update is called once per frame
@@ -37,7 +40,7 @@ public class PlayerFactory : MonoBehaviour
         PlayerBehavior temp = player.AddComponent<PlayerBehavior>();
         temp.setInvisible(true,0);
         // set player to a random position
-        player.transform.position = new Vector3(Random.Range(-5, 5), Random.Range(-5, 5), 0);
+        player.transform.position = new Vector3(Random.Range(-2, 2), Random.Range(-2, 2), 0);
         player.transform.parent = playerList.transform;
     }
 
