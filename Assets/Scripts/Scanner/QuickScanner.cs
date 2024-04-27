@@ -41,7 +41,7 @@ public class QuickScanner : MonoBehaviour
             yield return new WaitForSeconds(1);
              
             colliders[i].gameObject.GetComponent<PlayerBehavior>().setInvisible(false, 4f);
-            Debug.Log("Set " + colliders[i].gameObject.name + " visible");
+            // Debug.Log("Set " + colliders[i].gameObject.name + " visible");
             //yield return new WaitForSeconds(1);
             // wait for 2 seconds
 

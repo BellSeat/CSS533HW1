@@ -462,7 +462,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 0}
   playerList: {fileID: 0}
-  creatingPlayer: 0
 --- !u!114 &1092345929
 MonoBehaviour:
   m_ObjectHideFlags: 0

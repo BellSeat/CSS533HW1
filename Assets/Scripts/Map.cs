@@ -34,8 +34,8 @@ public class Map : MonoBehaviour
     public enum type { roadmap, satellite, gybrid, terrain };
     public type mapType = type.roadmap;
     private string url = "";
-    private int mapWidth = 125;
-    private int mapHeight = 200;
+    private int mapWidth = 62;
+    private int mapHeight = 100;
     private bool mapIsLoading = false; //not used. Can be used to know that the map is loading 
     private Rect rect;
 
@@ -68,8 +68,10 @@ public class Map : MonoBehaviour
             rect = gameObject.GetComponent<RectTransform>().rect;
             // get the width of the view
             mapWidth = (int)rect.width;
+            Debug.Log("Map Width: " + mapWidth);    
             // get the height of the view
             mapHeight = (int)rect.height;
+            Debug.Log("Map Height: " + mapHeight);
 
             //mapWidth = (int)Math.Round(rect.width);
             //mapHeight = (int)Math.Round(rect.height);

@@ -3,60 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\SQR95\\CSS553\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\ui\\areascanneruicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\areascanneruicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|c:\\users\\sqr95\\css553\\assets\\scripts\\ui\\resulltmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\resulltmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\ui\\quickscanneruicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\quickscanneruicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\scanner\\quickscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scanner\\quickscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|c:\\users\\sqr95\\css553\\assets\\scripts\\scanner\\areascanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scanner\\areascanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\scanner\\scannertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scanner\\scannertemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\theworldcontroller\\worldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\theworldcontroller\\worldcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\scanner\\scannerfactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scanner\\scannerfactor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\player\\playerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|c:\\users\\sqr95\\css553\\assets\\scripts\\ui\\popupmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ui\\popupmenuui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\player\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\player\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playermove.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\scanner\\quickscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\scanner\\quickscanner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\SQR95\\CSS553\\Assets\\TutorialInfo\\Scripts\\Map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\TutorialInfo\\Scripts\\Map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\scripts\\player\\mainplayerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\mainplayerbehavior.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|C:\\Users\\SQR95\\CSS553\\assets\\tutorialinfo\\scripts\\readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\tutorialinfo\\scripts\\readme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|c:\\users\\sqr95\\css553\\assets\\scripts\\player\\playerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7AC9C875-4E2B-AC86-68DF-57F7F9AD12A1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,174 +42,68 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuickScanner.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\QuickScanner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scanner\\QuickScanner.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\QuickScanner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scanner\\QuickScanner.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwAgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T05:39:07.142Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WorldController.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\TheWorldController\\WorldController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\TheWorldController\\WorldController.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\TheWorldController\\WorldController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\TheWorldController\\WorldController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T09:51:26.037Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ScannerTemplate.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\ScannerTemplate.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scanner\\ScannerTemplate.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\ScannerTemplate.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scanner\\ScannerTemplate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T20:24:32.348Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AreaScannerUIController.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\AreaScannerUIController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\AreaScannerUIController.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\AreaScannerUIController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\AreaScannerUIController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwDwAAAAAAAAA",
+              "Title": "ResulltMenu.cs",
+              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\ResulltMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\ResulltMenu.cs",
+              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\ResulltMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\ResulltMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T19:59:39.684Z",
+              "WhenOpened": "2024-04-27T07:21:24.221Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "QuickScannerUIController.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\QuickScannerUIController.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\QuickScannerUIController.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\QuickScannerUIController.cs",
-              "RelativeToolTip": "Assets\\Scripts\\UI\\QuickScannerUIController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAIAAAA",
+              "Title": "PopUpMenuUI.cs",
+              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\PopUpMenuUI.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\UI\\PopUpMenuUI.cs",
+              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\UI\\PopUpMenuUI.cs",
+              "RelativeToolTip": "Assets\\Scripts\\UI\\PopUpMenuUI.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADUAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T21:38:41.967Z",
+              "WhenOpened": "2024-04-27T07:11:48.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AreaScanner.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\AreaScanner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scanner\\AreaScanner.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\AreaScanner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scanner\\AreaScanner.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T10:34:02.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ScannerFactor.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\ScannerFactor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Scanner\\ScannerFactor.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\ScannerFactor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Scanner\\ScannerFactor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-22T21:38:40.273Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "PlayerFactory.cs",
               "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerFactory.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerFactory.cs",
               "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerFactory.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerFactory.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAA5AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T20:12:07.732Z"
+              "WhenOpened": "2024-04-27T07:03:08.325Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Map.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Map.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Map.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Map.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAMwCYAAABfAAAA",
+              "DocumentIndex": 3,
+              "Title": "QuickScanner.cs",
+              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\QuickScanner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Scanner\\QuickScanner.cs",
+              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Scanner\\QuickScanner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Scanner\\QuickScanner.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:13:09.131Z"
+              "WhenOpened": "2024-04-27T06:40:39.943Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PlayerMove.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerMove.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerMove.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerMove.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerMove.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAkwEgAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T19:47:04.301Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "PlayerBehavior.cs",
               "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerBehavior.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerBehavior.cs",
               "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\PlayerBehavior.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerBehavior.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBoAAAAAAAAA",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwDMAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-11T22:02:03.448Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MainPlayerBehavior.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\MainPlayerBehavior.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\MainPlayerBehavior.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\Scripts\\Player\\MainPlayerBehavior.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player\\MainPlayerBehavior.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T21:06:58.806Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Map.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\TutorialInfo\\Scripts\\Map.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Map.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\TutorialInfo\\Scripts\\Map.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Map.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T18:05:22.185Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Readme.cs",
-              "DocumentMoniker": "C:\\Users\\SQR95\\CSS553\\Assets\\TutorialInfo\\Scripts\\Readme.cs",
-              "RelativeDocumentMoniker": "Assets\\TutorialInfo\\Scripts\\Readme.cs",
-              "ToolTip": "C:\\Users\\SQR95\\CSS553\\Assets\\TutorialInfo\\Scripts\\Readme.cs",
-              "RelativeToolTip": "Assets\\TutorialInfo\\Scripts\\Readme.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-19T19:12:26.312Z"
+              "WhenOpened": "2024-04-27T06:39:02.571Z",
+              "EditorCaption": ""
             }
           ]
         }
