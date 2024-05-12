@@ -151,7 +151,7 @@ For each of the features listed:
 - Result and score display page: Provides immediate feedback on player actions, contributing to a sense of accomplishment and progress. It helps players track their performance.
 - Game data storage and way to update: Ensures continuity and progression in the game.
 
-## Check Point 3
+# Check Point 3
 
 ### updates
 
