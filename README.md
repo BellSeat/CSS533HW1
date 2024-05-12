@@ -134,7 +134,7 @@ that the player has sucessfully played a lot of rounds of the game.
 - a UI to show actions player can take, we used unity buttons
 - multiple points to display enemy location after scan action taken, which requires phone to request server to send other player info. In the MVP here we used dummy locations
 - a way to interact with enemy shown, in here we used on tap to bring out pop up menu
-- a pop up menu to display actions player can take to enemy after tapping enemy
+- a pop-up menu to display actions player can take to enemy after tapping enemy
 - a page displaying the result of the action
 - a way to store the game points and resources points for the user
 - a way to close the page and go back to the map
@@ -153,13 +153,13 @@ For each of the features listed:
 
 ### updates
 
-- mini games
+- mini-games
 - user profile
 - account system
 
 ### State Management
 
-unity provide MonoBehaviour. MonoBehavior has default OnApplicationPause, and OnApplicationFocus states. When Run In Background (Edit > Project Settings > Player > Resolution and Presentation) is disabled, a game running in the Editor's Play mode or in a standalone Player will pause any time the Editor or Player application loses focus. In these cases Unity sends OnApplicationPause(true) to all MonoBehaviours.
+unity provides MonoBehaviour. MonoBehavior has default OnApplicationPause and OnApplicationFocus states. When Run In Background (Edit > Project Settings > Player > Resolution and Presentation) is disabled, a game running in the Editor's Play mode or in a standalone Player will pause any time the Editor or Player application loses focus. In these cases, Unity sends OnApplicationPause(true) to all MonoBehaviours.
 
 The pauseStatus parameter is either true (paused) or false (running). All MonoBehaviours receive this event while they are initializing, just after Awake, so it will be called (with status false) on first entering Play mode. They receive it again whenever the application pauses or unpauses on losing or regaining focus.
 
@@ -171,4 +171,10 @@ OnApplicationPause can be a co-routine; to do this use the yield statement in th
 
 On Android, enabling the on-screen keyboard causes an OnApplicationFocus event with the value false. However, if you press "Home" at the moment the keyboard is enabled, the OnApplicationFocus event is not called and OnApplicationPause is called instead.
 
-In this case, our user data will be store in Unity allocated memory and restore when application awake. In case avoid to missing data in local when application paused, we will upload data to could when the application run in background.
+In this case, our user data will be stored in Unity allocated memory and restored when the application awakes. In case avoid missing data locally when the application pauses, we will upload data to could when the application runs in the background.
+
+### remain work
+
+- Better account system
+- More mini Game
+- Map server and GPS
