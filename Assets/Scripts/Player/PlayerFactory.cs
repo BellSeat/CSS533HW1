@@ -24,11 +24,11 @@ public class PlayerFactory : MonoBehaviour
     void Update()
     {
         // if press key "P" create player
-        if (Input.GetKeyUp(KeyCode.P))
-        {
-            createPlayer();
+        //if (Input.GetKeyUp(KeyCode.P))
+        //{
+        //    createPlayer();
 
-        }
+        //}
     }
 
     void createPlayer()
@@ -36,6 +36,7 @@ public class PlayerFactory : MonoBehaviour
         GameObject player = Instantiate(playerPrefab);
         player.name = getPlayerName();
         player.AddComponent<PlayerMove>();
+        player.AddComponent<MiniGameFactory>();
         player.transform.position = getPlayerPosition();
         PlayerBehavior temp = player.AddComponent<PlayerBehavior>();
         temp.setInvisible(true,0);

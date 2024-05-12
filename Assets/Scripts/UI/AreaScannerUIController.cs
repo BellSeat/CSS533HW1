@@ -10,7 +10,6 @@ public class AreaScannerUIController : MonoBehaviour
     [SerializeField] private int remainingScans;
     [SerializeField] private Button scanButton;
     [SerializeField] private Color NormalColor, HighlightedColor, SelectedColor,PressedColor, DisabledColor;
-    [SerializeField] private bool standby;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class AreaScannerUIController : MonoBehaviour
 
         // get the button component
         scanButton = GetComponent<Button>();
-        Assert.IsNotNull(scanButton, "Button component not found");
+        // Assert.IsNotNull(scanButton, "Button component not found");
 
         // set the button colors
         NormalColor = Color.grey;
@@ -53,7 +52,7 @@ public class AreaScannerUIController : MonoBehaviour
         // if there are remaining scans
         if (remainingScans > 0)
         {
-            standby = true;
+
             // create a new AreaScanner object
             GameObject areaScanner = new GameObject();
             

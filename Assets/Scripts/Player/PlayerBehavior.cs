@@ -7,11 +7,13 @@ public class PlayerBehavior : MonoBehaviour
 {
     [SerializeField] private bool invisible = false;
     [SerializeField] private GameObject PopUpMenu;
+    [SerializeField] private int luckyNumber;
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        PopUpMenu = Resources.Load("Prefab/UI/PopUpMenu") as GameObject;
-        Assert.IsNotNull(PopUpMenu);
+       PopUpMenu = Resources.Load("Prefab/UI/PopUpMenu") as GameObject;
+        luckyNumber = Random.Range(1, 101);
+       // Assert.IsNotNull(PopUpMenu);
     }
 
 
@@ -21,8 +23,6 @@ public class PlayerBehavior : MonoBehaviour
         if (invisible == true) { 
             transform.GetComponent<SpriteRenderer>().enabled = false;
             return;
-
-
         }
         transform.GetComponent<SpriteRenderer>().enabled = !invisible;
         StartCoroutine(setInvisible(timer));
@@ -53,4 +53,13 @@ public class PlayerBehavior : MonoBehaviour
         }
     }
     
+    public void setLuckyNumber(int number)
+    {
+        luckyNumber = number;
+    }
+
+    public int getLuckyNumber()
+    {
+        return luckyNumber;
+    }
 }

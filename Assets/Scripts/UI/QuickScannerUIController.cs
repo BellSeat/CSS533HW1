@@ -11,7 +11,7 @@ public class QuickScannerController : MonoBehaviour
     void Start()
     {
         scanButton = gameObject.GetComponent<Button>();
-        Assert.IsNotNull(scanButton, "the button is not found");
+        // Assert.IsNotNull(scanButton, "the button is not found");
         scanButton.onClick.AddListener(Scan);
     }
 
