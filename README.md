@@ -115,29 +115,20 @@ We have little experience with AWS, so we may meet many issues with we deploy a 
 
 For our game, the happy path would be:
 
-Open the app --> enter user credential --> click login --> 
-click one of the scan button --> click one of the action button --> 
-enter one of the battle page --> successfully solve the question --> 
+Open the app --> enter user credential --> click login -->
+click one of the scan button --> click one of the action button -->
+enter one of the battle page --> successfully solve the question -->
 evaluation page to collect points --> back to world to look for more battles
 
 ### Success Criteria
-For a mobile game, the success criteria will be points earned. The more a player's points are would mean 
-that the player has sucessfully played a lot of rounds of the game. 
+
+For a mobile game, the success criteria will be points earned. The more a player's points are would mean
+that the player has sucessfully played a lot of rounds of the game.
+For a mobile game, the success criteria will be points earned. The more a player's points are would mean
+that the player has sucessfully played a lot of rounds of the game.
+
 ---
 
-# Check Point 2
-The minimum viable product currently can go through the following steps:
-1. opening the app and land on the map page
-2. the map page will have UI, point that indicate your location
-3. the UI shows action button such as quick scan
-4. once player press quick scan, enemies around the area will show up on map
-5. tap the enemy spot will bring out action menu
-6. select action to gain resource or destroy enemy
-7. after action page, score count page will show to display resource gained and player info will be saved and updated
-8. closing the page will bring you back to the map page
-
-### List of features needed for the MVP + Breakdown of tasks
-Up until this point the game loop is finished. In terms of the features that are required, we need:
 - a display of the map, in here we used Google Map API
 - a point to display player location, we had to ask for user permission and get longitude and latitude to put into the map location
 - a UI to show actions player can take, we used unity buttons
@@ -149,11 +140,35 @@ Up until this point the game loop is finished. In terms of the features that are
 - a way to close the page and go back to the map
 
 ### Mapping between features and value(s) to be delivered by your app (justification)
+
 For each of the features listed:
+
 - Map display, by using Google Map API: enhances user experience by providing a familiar and interactive map interface. It helps users orient themselves in the game environment, linking virtual elements with real-world locations.
 - Player Location Indication: increases realism and personalization by showing the player's actual location. This feature supports navigation and strategy, making the game experience more engaging and relevant to the user's real-world surroundings.
 - User interface with action buttons: simplifies gameplay by providing easy access to game functions such as the quick scan. This feature makes the game more user-friendly and accessible.
 - Enemy Detection such as Quick Scan and interacting with enemy: can add excitement and a sense of unpredictability. This feature encourages exploration and interaction within the game.
 - Action pop up menu: enhances user engagement by offering choices such as gathering resources or attacking enemies. As we add more ways for player to intereact with enemy, it would allow for a more diverse gameplay strategies and increases the game's replay value.
 - Result and score display page: Provides immediate feedback on player actions, contributing to a sense of accomplishment and progress. It helps players track their performance.
-- Game data storage and way to update: Ensures continuity and progression in the game. 
+- Game data storage and way to update: Ensures continuity and progression in the game.
+
+### updates
+
+- mini games
+- user profile
+- account system
+
+### State Management
+
+unity provide MonoBehaviour. MonoBehavior has default OnApplicationPause, and OnApplicationFocus states. When Run In Background (Edit > Project Settings > Player > Resolution and Presentation) is disabled, a game running in the Editor's Play mode or in a standalone Player will pause any time the Editor or Player application loses focus. In these cases Unity sends OnApplicationPause(true) to all MonoBehaviours.
+
+The pauseStatus parameter is either true (paused) or false (running). All MonoBehaviours receive this event while they are initializing, just after Awake, so it will be called (with status false) on first entering Play mode. They receive it again whenever the application pauses or unpauses on losing or regaining focus.
+
+Note: Unity does not call OnApplicationPause in response to toggling the Pause button in the Editor toolbar. The status of the pause button in the Editor is tracked by the PauseState enum.
+
+For OnApplicationPause to trigger in a Player application running separately from the Editor, the running Player must be windowed and smaller than the full screen. If the game is hidden (fully or partly) by another application then it pauses and Unity calls OnApplicationPause with true. When the game regains focus, Unity calls OnApplicationPause with false.
+
+OnApplicationPause can be a co-routine; to do this use the yield statement in the function. Implemented this way, it is evaluated twice during the initial frame: first as an early notification, and secondly during the normal co-routine update step.
+
+On Android, enabling the on-screen keyboard causes an OnApplicationFocus event with the value false. However, if you press "Home" at the moment the keyboard is enabled, the OnApplicationFocus event is not called and OnApplicationPause is called instead.
+
+In this case, our user data will be store in Unity allocated memory and restore when application awake. In case avoid to missing data in local when application paused, we will upload data to could when the application run in background.
