@@ -121,10 +121,12 @@ enter one of the battle page --> successfully solve the question -->
 evaluation page to collect points --> back to world to look for more battles
 
 ### Success Criteria
-For a mobile game, the success criteria will be points earned. The more a player's points are would mean 
-that the player has sucessfully played a lot of rounds of the game. 
-For a mobile game, the success criteria will be points earned. The more a player's points are would mean 
-that the player has sucessfully played a lot of rounds of the game. 
+
+For a mobile game, the success criteria will be points earned. The more a player's points are would mean
+that the player has sucessfully played a lot of rounds of the game.
+For a mobile game, the success criteria will be points earned. The more a player's points are would mean
+that the player has sucessfully played a lot of rounds of the game.
+
 ---
 
 - a display of the map, in here we used Google Map API
@@ -154,3 +156,19 @@ For each of the features listed:
 - mini games
 - user profile
 - account system
+
+### State Management
+
+unity provide MonoBehaviour. MonoBehavior has default OnApplicationPause, and OnApplicationFocus states. When Run In Background (Edit > Project Settings > Player > Resolution and Presentation) is disabled, a game running in the Editor's Play mode or in a standalone Player will pause any time the Editor or Player application loses focus. In these cases Unity sends OnApplicationPause(true) to all MonoBehaviours.
+
+The pauseStatus parameter is either true (paused) or false (running). All MonoBehaviours receive this event while they are initializing, just after Awake, so it will be called (with status false) on first entering Play mode. They receive it again whenever the application pauses or unpauses on losing or regaining focus.
+
+Note: Unity does not call OnApplicationPause in response to toggling the Pause button in the Editor toolbar. The status of the pause button in the Editor is tracked by the PauseState enum.
+
+For OnApplicationPause to trigger in a Player application running separately from the Editor, the running Player must be windowed and smaller than the full screen. If the game is hidden (fully or partly) by another application then it pauses and Unity calls OnApplicationPause with true. When the game regains focus, Unity calls OnApplicationPause with false.
+
+OnApplicationPause can be a co-routine; to do this use the yield statement in the function. Implemented this way, it is evaluated twice during the initial frame: first as an early notification, and secondly during the normal co-routine update step.
+
+On Android, enabling the on-screen keyboard causes an OnApplicationFocus event with the value false. However, if you press "Home" at the moment the keyboard is enabled, the OnApplicationFocus event is not called and OnApplicationPause is called instead.
+
+In this case, our user data will be store in Unity allocated memory and restore when application awake. In case avoid to missing data in local when application paused, we will upload data to could when the application run in background.
