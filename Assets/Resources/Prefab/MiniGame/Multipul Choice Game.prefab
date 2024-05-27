@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3584792723183537686}
   - component: {fileID: 3579242029755177991}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 2458838495280910251}
   - component: {fileID: 4251682746798075632}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,6 +518,12 @@ MonoBehaviour:
   - {fileID: 704686851385337992}
   resultPage: {fileID: 0}
   popUpMessage: {fileID: 0}
+  gameDescription: {fileID: 5477425278527402534}
+  choiceTexts:
+  - {fileID: 6419781184861890399}
+  - {fileID: 7870415998374739245}
+  - {fileID: 3579242029755177991}
+  - {fileID: 4251682746798075632}
 --- !u!1 &1796040479342861538
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,7 +672,7 @@ GameObject:
   - component: {fileID: 439976146324185725}
   - component: {fileID: 6419781184861890399}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,7 +1428,7 @@ GameObject:
   - component: {fileID: 4399545501778141178}
   - component: {fileID: 7870415998374739245}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

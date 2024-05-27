@@ -1,2 +1,17 @@
 fileFormatVersion: 2
 guid: 091fb160a9561004fac9419f09c58616
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - questionText: {instanceID: 0}
+  - countDown: {instanceID: 0}
+  - closeButton: {instanceID: 0}
+  - resultPage: {instanceID: 0}
+  - popUpMessage: {instanceID: 0}
+  - questionsJson: {fileID: 4900000, guid: 11bb1bc85d82c47469710defaa28830e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
