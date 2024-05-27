@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using Newtonsoft.Json.Linq;
 
 public class LoginManager : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class LoginManager : MonoBehaviour
 
     public GameObject popupLoginFailed;
     public GameObject popupRegisSucces;
-    public Canvas canvas; 
+    public Canvas canvas;
 
     void Start()
     {
@@ -59,9 +60,40 @@ public class LoginManager : MonoBehaviour
         else
         {
             Debug.Log("Login Response: " + request.downloadHandler.text);
+            MainPlayerProfile.playerName = username;
             SceneManager.LoadScene("Main");
         }
     }
+
+    /*
+    IEnumerator GetUserDetails(string username)
+    {
+        string url = "http://3.88.180.219/get_user_details/";
+        string jsonBody = "{\"username\": \"" + username + "\"}";
+
+        UnityWebRequest request = new UnityWebRequest(url, "POST");
+        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
+        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
+        request.downloadHandler = new DownloadHandlerBuffer();
+        request.SetRequestHeader("Content-Type", "application/json");
+
+        yield return request.SendWebRequest();
+
+        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        {
+            Debug.LogError("Get User Details Error: " + request.error);
+        }
+        else
+        {
+            Debug.Log("User Details: " + request.downloadHandler.text);
+            // Parse JSON response and store values in UserData
+            JObject userDetails = JObject.Parse(request.downloadHandler.text);
+            MainPlayerProfile.playerName = username;
+            // Transition to the main scene after fetching user details
+            
+        }
+    }
+    */
 
     IEnumerator Register(string username, string password)
     {
@@ -86,8 +118,6 @@ public class LoginManager : MonoBehaviour
             SpawnPopup(popupRegisSucces);
         }
     }
-
-
 
     void SpawnPopup(GameObject popupPrefab)
     {
