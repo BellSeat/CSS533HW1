@@ -1,10 +1,12 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Networking;
-using System.Collections;
 using UnityEngine.SceneManagement;
-using Newtonsoft.Json.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 public class LoginManager : MonoBehaviour
 {
@@ -15,120 +17,165 @@ public class LoginManager : MonoBehaviour
 
     public GameObject popupLoginFailed;
     public GameObject popupRegisSucces;
+    public GameObject popupRegisFailed;
     public Canvas canvas;
+
+    private const string UserProfilesKey = "UserProfiles";
+    private static readonly Regex inputRegex = new Regex("^[a-zA-Z0-9!@#$%^&*()_+=-]{8,}$");
 
     void Start()
     {
-        Button loginBtn = loginButton.GetComponent<Button>();
-        Button regisBtn = registerButton.GetComponent<Button>();
-        loginBtn.onClick.AddListener(OnLoginButtonClick);
-        regisBtn.onClick.AddListener(OnRegisterButtonClick);
+        loginButton.onClick.AddListener(OnLoginButtonClick);
+        registerButton.onClick.AddListener(OnRegisterButtonClick);
     }
 
     void OnLoginButtonClick()
     {
         string username = usernameInput.text;
         string password = passwordInput.text;
-        StartCoroutine(Login(username, password));
+
+        if (ValidateInput(username, password))
+        {
+            Login(username, HashPassword(password));
+        }
+        else
+        {
+            string errorMessage = "Login Failed!\n\nPlease enter a username and password longer than 8 characters.\nYou can use letters, numbers, and the following symbols: !@#$%^&*()_+=-";
+            SpawnPopup(popupLoginFailed, errorMessage);
+        }
     }
 
     void OnRegisterButtonClick()
     {
         string username = usernameInput.text;
         string password = passwordInput.text;
-        StartCoroutine(Register(username, password));
-    }
 
-    IEnumerator Login(string username, string password)
-    {
-        string url = "http://3.88.180.219/login/";
-        string jsonBody = "{\"username\": \"" + username + "\", \"password\": \"" + password + "\"}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        if (ValidateInput(username, password))
         {
-            Debug.LogError("Login Error: " + request.error);
-            SpawnPopup(popupLoginFailed);
+            Register(username, HashPassword(password));
         }
         else
         {
-            Debug.Log("Login Response: " + request.downloadHandler.text);
-            MainPlayerProfile.playerName = username;
-            SceneManager.LoadScene("Main");
+            string errorMessage = "Registration Failed!\n\nPlease enter a username and password longer than 8 characters.\nYou can use letters, numbers, and the following symbols: !@#$%^&*()_+=-";
+            SpawnPopup(popupRegisFailed, errorMessage);
         }
     }
 
-    /*
-    IEnumerator GetUserDetails(string username)
+    void Login(string username, string hashedPassword)
     {
-        string url = "http://3.88.180.219/get_user_details/";
-        string jsonBody = "{\"username\": \"" + username + "\"}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        Dictionary<string, UserProfile> userProfiles = LoadAllUsers();
+        if (userProfiles == null)
         {
-            Debug.LogError("Get User Details Error: " + request.error);
+            Debug.LogError("Failed to load user profiles. UserProfiles dictionary is null.");
+            return;
+        }
+
+        if (userProfiles.ContainsKey(username))
+        {
+            UserProfile profile = userProfiles[username];
+            if (profile.Password == hashedPassword)
+            {
+                Debug.Log("Login successful.");
+                MainPlayerProfile.playerName = username;
+                SceneManager.LoadScene("Main");
+            }
+            else
+            {
+                SpawnPopup(popupLoginFailed, "Login Failed!\n\nIncorrect username or password.");
+            }
         }
         else
         {
-            Debug.Log("User Details: " + request.downloadHandler.text);
-            // Parse JSON response and store values in UserData
-            JObject userDetails = JObject.Parse(request.downloadHandler.text);
-            MainPlayerProfile.playerName = username;
-            // Transition to the main scene after fetching user details
-            
+            SpawnPopup(popupLoginFailed, "Login Failed!\n\nUsername does not exist.");
         }
     }
-    */
 
-    IEnumerator Register(string username, string password)
+    void Register(string username, string hashedPassword)
     {
-        string url = "http://3.88.180.219/register/";
-        string jsonBody = "{\"username\": \"" + username + "\", \"password\": \"" + password + "\"}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        Dictionary<string, UserProfile> userProfiles = LoadAllUsers();
+        if (userProfiles == null)
         {
-            Debug.LogError("Register Error: " + request.error);
+            Debug.LogError("Failed to load user profiles. UserProfiles dictionary is null.");
+            userProfiles = new Dictionary<string, UserProfile>();
+        }
+
+        if (userProfiles.ContainsKey(username))
+        {
+            string errorMessage = "Registration Failed!\n\nUsername already taken.";
+            SpawnPopup(popupRegisFailed, errorMessage);
         }
         else
         {
-            Debug.Log("Register Response: " + request.downloadHandler.text);
-            SpawnPopup(popupRegisSucces);
+            UserProfile profile = new UserProfile(username, hashedPassword);
+            userProfiles[username] = profile;
+            SaveAllUsers(userProfiles);
+            SpawnPopup(popupRegisSucces, "Registration Successful!");
         }
     }
 
-    void SpawnPopup(GameObject popupPrefab)
+    void SpawnPopup(GameObject popupPrefab, string message = null)
     {
-        // Instantiate the popup prefab
         GameObject popupInstance = Instantiate(popupPrefab);
-
-        // Set the popup as a child of the canvas
         popupInstance.transform.SetParent(canvas.transform, false);
 
-        // Center the popup in the canvas
+        if (message != null)
+        {
+            TMP_Text messageText = popupInstance.transform.Find("Message").GetComponent<TMP_Text>();
+            if (messageText != null)
+            {
+                messageText.text = message;
+            }
+        }
+
         RectTransform popupRectTransform = popupInstance.GetComponent<RectTransform>();
         popupRectTransform.anchoredPosition = Vector2.zero;
+    }
+
+    bool ValidateInput(string username, string password)
+    {
+        return inputRegex.IsMatch(username) && inputRegex.IsMatch(password);
+    }
+
+    string HashPassword(string password)
+    {
+        using (SHA256 sha256Hash = SHA256.Create())
+        {
+            byte[] bytes = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(password));
+            StringBuilder builder = new StringBuilder();
+            for (int i = 0; i < bytes.Length; i++)
+            {
+                builder.Append(bytes[i].ToString("x2"));
+            }
+            return builder.ToString();
+        }
+    }
+
+    Dictionary<string, UserProfile> LoadAllUsers()
+    {
+        string json = PlayerPrefs.GetString(UserProfilesKey, "{}");
+        if (string.IsNullOrEmpty(json))
+        {
+            return new Dictionary<string, UserProfile>();
+        }
+
+        Dictionary<string, UserProfile> userProfiles;
+        try
+        {
+            userProfiles = JsonConvert.DeserializeObject<Dictionary<string, UserProfile>>(json);
+        }
+        catch (System.Exception ex)
+        {
+            Debug.LogError("Error deserializing user profiles: " + ex.Message);
+            userProfiles = new Dictionary<string, UserProfile>();
+        }
+
+        return userProfiles;
+    }
+
+    void SaveAllUsers(Dictionary<string, UserProfile> userProfiles)
+    {
+        string json = JsonConvert.SerializeObject(userProfiles);
+        PlayerPrefs.SetString(UserProfilesKey, json);
+        PlayerPrefs.Save();
     }
 }

@@ -6,13 +6,20 @@ public class ResulltMenu : MonoBehaviour
 {
 
     [SerializeField] private Button closeButton;
-    [SerializeField] private MainPlayerProfile mainPlayerProfile;
+    [SerializeField] private PlayerDataManager playerDataManager;
+
+    public bool isPractice = false;
+
     // Start is called before the first frame update
     void Start()
     {
         closeButton.onClick.AddListener(CloseButtonClicked);
-        mainPlayerProfile = GameObject.Find("MainPlayer").GetComponent<MainPlayerProfile>();
-
+        if (!isPractice)
+        {
+            playerDataManager = GameObject.Find("MainPlayer").GetComponent<PlayerDataManager>();
+            playerDataManager.AddPlayerEXP(500);
+            playerDataManager.AddPlayerScore(500);
+        }
     }
 
     // Update is called once per frame
@@ -25,7 +32,5 @@ public class ResulltMenu : MonoBehaviour
     {
         Debug.Log("Close Button Clicked");
         Destroy(this.gameObject);
-        mainPlayerProfile.addPlayerEXP(500);
-        mainPlayerProfile.addPlayerScore(500);
     }
 }

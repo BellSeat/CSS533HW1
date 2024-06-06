@@ -43,7 +43,7 @@ public class MultichoiceGame : MonoBehaviour
 
     void Start()
     {
-        string filePath = Path.Combine(Application.dataPath, "Scripts/MiniGame/questions.json");
+        string filePath = Path.Combine(Application.streamingAssetsPath, "questions.json");
         
         duration = 30;
         resultPage = Resources.Load<GameObject>("Prefab/UI/ResultMenu") as GameObject;

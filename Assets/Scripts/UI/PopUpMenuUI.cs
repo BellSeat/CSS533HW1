@@ -76,8 +76,8 @@ public class PopUpMenuUI : MonoBehaviour
         
         if (enemy != null)
         {
-            int random = Random.Range(0, 2);
-            enemy.GetComponent<MiniGameFactory>().CrateARandGame();
+            //int random = Random.Range(0, 2);
+            enemy.GetComponent<MiniGameFactory>().CreateARandGame();
         }
         else
         {

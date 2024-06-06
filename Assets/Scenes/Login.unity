@@ -647,7 +647,7 @@ MonoBehaviour:
   m_text: MapClash
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 9ad269c99dcf42b7aedefd83dd5a7b9d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -675,9 +675,9 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 18
-  m_fontSizeMax: 200
-  m_fontStyle: 0
+  m_fontSizeMin: 50
+  m_fontSizeMax: 220
+  m_fontStyle: 33
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -1329,6 +1329,7 @@ MonoBehaviour:
   registerButton: {fileID: 1005356230}
   popupLoginFailed: {fileID: 3391341238115420416, guid: 813787a3443314073b79e8a93c52788b, type: 3}
   popupRegisSucces: {fileID: 1295495198014024280, guid: d4d3e2024d74f4377bbb37d9c9bb65d1, type: 3}
+  popupRegisFailed: {fileID: 3391341238115420416, guid: e1e157c613c594ba9a6dfacabf1d5699, type: 3}
   canvas: {fileID: 1536561631}
 --- !u!1 &1657340139
 GameObject:

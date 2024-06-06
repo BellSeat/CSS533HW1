@@ -1,123 +1,62 @@
-using System.Collections;
 using UnityEngine;
-using UnityEngine.Networking;
-using Newtonsoft.Json.Linq;
 
 public class MainPlayerProfile : MonoBehaviour
 {
-    [SerializeField] public static string playerName;
-    [SerializeField] private static int playerLevel;
-    [SerializeField] private int playerScore;
-    [SerializeField] private static int playerEXP;
+    public static string playerName;
+    public PlayerDataManager playerDataManager;
 
-    bool isPaused = false;
-
-    // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(downloadUserProfileFromServer());
+        playerDataManager.currentPlayerData = playerDataManager.GetUserProfile(playerName);
     }
 
-    private void OnGUI()
+    private void OnDestroy()
     {
-        if (isPaused)
+        SaveUserProfile();
+        playerDataManager.SaveAllPlayersData();
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
         {
-            GUI.Label(new Rect(10, 10, 100, 20), "Game is paused");
-            uploadUserProfileToServer();
+            SaveUserProfile();
+            playerDataManager.SaveAllPlayersData();
         }
-    }
-
-    public void OnApplicationPause(bool pause)
-    {
-        isPaused = pause;
     }
 
     private void OnApplicationFocus(bool hasFocus)
     {
-        isPaused = !hasFocus;
-        if (hasFocus)
+        if (!hasFocus)
         {
-            downloadUserProfileFromServer();
-        }
-    }
-
-    private void uploadUserProfileToServer()
-    {
-        UpdateExperienceOnServer(playerEXP);
-        UpdateLevelsOnServer(playerLevel);
-    }
-
-    private IEnumerator downloadUserProfileFromServer()
-    {
-        string url = "http://3.88.180.219/get_user_details/";
-        string jsonBody = "{\"username\": \"" + playerName + "\"}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
-        {
-            Debug.LogError("Get User Profile Error: " + request.error);
+            SaveUserProfile();
+            playerDataManager.SaveAllPlayersData();
         }
         else
         {
-            Debug.Log("User Profile: " + request.downloadHandler.text);
-            // Parse the response JSON to set the user data
-            var userProfile = JsonUtility.FromJson<UserProfile>(request.downloadHandler.text);
-            playerName = userProfile.username;
-            playerEXP = userProfile.experience;
-            playerLevel = userProfile.levels;
+            playerDataManager.LoadAllPlayersData();
+            LoadUserProfile();
         }
     }
 
-    private IEnumerator UpdateExperienceOnServer(int newExperience)
+    private void LoadUserProfile()
     {
-        string url = "http://3.88.180.219/update_experience/";
-        string jsonBody = "{\"username\": \"" + playerName + "\", \"experience\": " + newExperience + "}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        UserProfile profile = playerDataManager.GetUserProfile(playerName);
+        if (profile != null)
         {
-            Debug.LogError("Update Experience Error: " + request.error);
+            playerDataManager.currentPlayerData = profile;
         }
         else
         {
-            Debug.Log("Update Experience Response: " + request.downloadHandler.text);
+            Debug.LogError("User profile not found for: " + playerName);
         }
     }
 
-    private IEnumerator UpdateLevelsOnServer(int newLevels)
+    private void SaveUserProfile()
     {
-        string url = "http://3.88.180.219/update_levels/";
-        string jsonBody = "{\"username\": \"" + playerName + "\", \"levels\": " + newLevels + "}";
-
-        UnityWebRequest request = new UnityWebRequest(url, "POST");
-        byte[] bodyRaw = new System.Text.UTF8Encoding().GetBytes(jsonBody);
-        request.uploadHandler = new UploadHandlerRaw(bodyRaw);
-        request.downloadHandler = new DownloadHandlerBuffer();
-        request.SetRequestHeader("Content-Type", "application/json");
-
-        yield return request.SendWebRequest();
-
-        if (request.result == UnityWebRequest.Result.ConnectionError || request.result == UnityWebRequest.Result.ProtocolError)
+        if (playerDataManager.currentPlayerData != null)
         {
-            Debug.LogError("Update Levels Error: " + request.error);
-        }
-        else
-        {
-            Debug.Log("Update Levels Response: " + request.downloadHandler.text);
+            playerDataManager.AddOrUpdateUserProfile(playerDataManager.currentPlayerData);
         }
     }
 
@@ -128,17 +67,29 @@ public class MainPlayerProfile : MonoBehaviour
 
     public void setPlayerLevel(int level)
     {
-        playerLevel = level;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Level = level;
+            SaveUserProfile();
+        }
     }
 
     public void setPlayerScore(int score)
     {
-        playerScore = score;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Score = score;
+            SaveUserProfile();
+        }
     }
 
     public void setPlayerEXP(int exp)
     {
-        playerEXP = exp;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Experience = exp;
+            SaveUserProfile();
+        }
     }
 
     public string getPlayerName()
@@ -148,47 +99,48 @@ public class MainPlayerProfile : MonoBehaviour
 
     public int getPlayerLevel()
     {
-        return playerLevel;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Level : 0;
     }
 
     public int getPlayerScore()
     {
-        return playerScore;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Score : 0;
     }
 
     public int getPlayerEXP()
     {
-        return playerEXP;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Experience : 0;
     }
 
     public void addPlayerEXP(int exp)
     {
-        playerEXP += exp;
-        calculateLevel();
-        uploadUserProfileToServer();
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Experience += exp;
+            calculateLevel();
+            SaveUserProfile();
+        }
     }
 
     public void addPlayerScore(int score)
     {
-        playerScore += score;
-        uploadUserProfileToServer();
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Score += score;
+            SaveUserProfile();
+        }
     }
 
     private void calculateLevel()
     {
-        if (playerEXP >= 100)
+        if (playerDataManager.currentPlayerData != null)
         {
-            int add = playerEXP / 100;
-            playerLevel += add;
-            playerEXP = playerEXP % 100;
+            if (playerDataManager.currentPlayerData.Experience >= 100)
+            {
+                int add = playerDataManager.currentPlayerData.Experience / 100;
+                playerDataManager.currentPlayerData.Level += add;
+                playerDataManager.currentPlayerData.Experience %= 100;
+            }
         }
-    }
-
-    [System.Serializable]
-    private class UserProfile
-    {
-        public string username;
-        public int experience;
-        public int levels;
     }
 }

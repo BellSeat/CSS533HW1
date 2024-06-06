@@ -6,7 +6,8 @@ using UnityEngine.UI;
 
 public class ProfilerUIController : MonoBehaviour
 {
-    [SerializeField] private MainPlayerProfile playerProfile;
+    [SerializeField] public PlayerDataManager playerDataManager;
+    [SerializeField] private PlayerData currentPlayerData;
     [SerializeField] private TMP_Text playerNameText, playerEXP, playerLevel, playerScore;
     [SerializeField] private Button profileButton;
     [SerializeField] private bool isVisible  = false;
@@ -20,7 +21,7 @@ public class ProfilerUIController : MonoBehaviour
         playerNamePreText = "Player Name: ";
         playerEXPText = "Player EXP: ";
         playerLevelText = "Player Level: ";
-        playerScoreText = "Player Score: ";
+        playerScoreText = "Player Coins: ";
     }
 
     // display/hide player profile
@@ -29,10 +30,10 @@ public class ProfilerUIController : MonoBehaviour
         isVisible = !isVisible;
         if(isVisible)
         {
-            playerNameText.text = playerNamePreText + playerProfile.getPlayerName();
-            playerEXP.text = playerEXPText + playerProfile.getPlayerEXP().ToString();
-            playerLevel.text = playerLevelText + playerProfile.getPlayerLevel().ToString();
-            playerScore.text = playerScoreText + playerProfile.getPlayerScore().ToString();
+            playerNameText.text = playerNamePreText + MainPlayerProfile.playerName;
+            playerEXP.text = playerEXPText + playerDataManager.getPlayerEXP();
+            playerLevel.text = playerLevelText + playerDataManager.getPlayerLevel();
+            playerScore.text = playerScoreText + playerDataManager.getPlayerScore();
         }
         else
         {

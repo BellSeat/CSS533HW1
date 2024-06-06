@@ -180,3 +180,27 @@ In this case, our user data will be stored in Unity allocated memory and restore
 - Better account system
 - More mini Game
 - Map server and GPS
+
+
+
+### Final Submission:
+
+#### Does it accomplish the stated objective? 
+- The game’s mechanics is a map based vs game. At the current stage it can provide user with a login system to store their data and allow the user to play several kinds of mini games. In terms of having a mobile gaming experience, our app does accomplish the objective. However, there are still other features such as multiplayer score and friends list are still not implemented yet.
+
+#### Does it deliver on the “value proposition”? 
+-  Our app is a location based game and it offers different kinds of minigames. It provides a lot of replayability and it does support the original value proposition.
+
+#### Does it respect user privacy/is it secure?
+- Passwords are hashed using SHA-256 before storage. Originally we would store the data to Amazon EC2 server after player sends the hashed password. Now for submission purpose we have changed to storing it locally on playerPref.
+
+#### Does it have proper app lifecycle/state management?
+- The MainPlayerProfile script handles most lifecycle events (OnDestroy, OnApplicationPause, OnApplicationFocus) to ensure user data is saved and loaded appropriately. The LogoutManager script ensures data is saved when the user logs out.
+
+#### Does it address at least three additional challenges (other than privacy and state management) unique to mobile app development?
+- The map service achieved by requesting user permission to location service, and then request Google Map service with the longitude and latitude to render on a RawImage class in the scene. (Permission Management and GPS Location Service)
+- The trivia mini game have 50 different questions. It was achieved by saving the questions in a JSON file stored under Streaming Assets. (Storage)
+- The Don't pop the balloon mini game requires user to blow air to the microphone. It was achieved by taking user permission on microphone, and then convert the microphone data to float at real time to add to the balloon size. (Permission Management and Sensor Data)
+
+#### Does it have a good user experience? 
+- The user experience is standard. We did not put a lot of time in UI design but the UI experience is functional. 
