@@ -15,7 +15,7 @@ public class PlayerFactory : MonoBehaviour
         // find a GameObject list playerlist in the scene
         playerList = GameObject.Find("PlayerList");
 
-        for (int i = 0; i <= 5; i++) { 
+        for (int i = 0; i <= 3; i++) { 
             createPlayer();
         }
     }

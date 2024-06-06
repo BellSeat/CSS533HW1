@@ -65,8 +65,9 @@ public class PlayerMove : MonoBehaviour
     //    return -1;
     //}
 
-    void setPlayerPosition(Vector2 position) { 
-        
+    void setPlayerPosition(Vector2 position)
+    {
+
         transform.position = new Vector3(position.x, position.y, 0);
     }
 

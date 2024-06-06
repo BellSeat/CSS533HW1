@@ -92,10 +92,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 58.85
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -148,7 +148,7 @@ GameObject:
   - component: {fileID: 3584792723183537686}
   - component: {fileID: 3579242029755177991}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -228,11 +228,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -284,7 +284,7 @@ GameObject:
   - component: {fileID: 2458838495280910251}
   - component: {fileID: 4251682746798075632}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,11 +364,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -475,14 +475,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300090, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -504,6 +504,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 091fb160a9561004fac9419f09c58616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GuessANumberGame: {fileID: 0}
+  MutiChoiceGame: {fileID: 0}
+  parent: {fileID: 0}
   Choice: 00000000
   isChoiceActive: 00000000
   duration: 0
@@ -518,6 +521,12 @@ MonoBehaviour:
   - {fileID: 704686851385337992}
   resultPage: {fileID: 0}
   popUpMessage: {fileID: 0}
+  gameDescription: {fileID: 5477425278527402534}
+  choiceTexts:
+  - {fileID: 6419781184861890399}
+  - {fileID: 7870415998374739245}
+  - {fileID: 3579242029755177991}
+  - {fileID: 4251682746798075632}
 --- !u!1 &1796040479342861538
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,10 +619,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 54.2
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -666,7 +675,7 @@ GameObject:
   - component: {fileID: 439976146324185725}
   - component: {fileID: 6419781184861890399}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,11 +755,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -947,8 +956,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124.70999, y: -152}
-  m_SizeDelta: {x: 245.43, y: 192.6667}
+  m_AnchoredPosition: {x: 160.2917, y: -152}
+  m_SizeDelta: {x: 320, y: 192.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7171438253751424415
 CanvasRenderer:
@@ -1068,8 +1077,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 124.71, y: -344.67}
-  m_SizeDelta: {x: 245.43, y: 192.6667}
+  m_AnchoredPosition: {x: 160, y: -344.67}
+  m_SizeDelta: {x: 320, y: 192.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3120166574570296102
 CanvasRenderer:
@@ -1325,8 +1334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -120.72, y: -152}
-  m_SizeDelta: {x: 245.43, y: 192.6667}
+  m_AnchoredPosition: {x: -160, y: -152}
+  m_SizeDelta: {x: 320, y: 192.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8939110702167896798
 CanvasRenderer:
@@ -1422,7 +1431,7 @@ GameObject:
   - component: {fileID: 4399545501778141178}
   - component: {fileID: 7870415998374739245}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Text (TMP) B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1502,11 +1511,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -1582,8 +1591,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -122.71, y: -344.67}
-  m_SizeDelta: {x: 245.43, y: 192.6667}
+  m_AnchoredPosition: {x: -160, y: -344.67}
+  m_SizeDelta: {x: 320, y: 192.6667}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &583821139327095022
 CanvasRenderer:

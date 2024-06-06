@@ -1,0 +1,380 @@
+{
+  "questions": [
+    {
+      "question": "What does CPU stand for?",
+      "choiceA": "Central Process Unit",
+      "choiceB": "Central Processing Unit",
+      "choiceC": "Computer Personal Unit",
+      "choiceD": "Central Processor Unit",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Who is known as the father of computer science?",
+      "choiceA": "Alan Turing",
+      "choiceB": "Charles Babbage",
+      "choiceC": "John von Neumann",
+      "choiceD": "Bill Gates",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the main function of the ALU in a computer?",
+      "choiceA": "Control logic operations",
+      "choiceB": "Perform arithmetic and logic operations",
+      "choiceC": "Store data",
+      "choiceD": "Manage input/output operations",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which programming language is known as the 'mother of all languages'?",
+      "choiceA": "C",
+      "choiceB": "FORTRAN",
+      "choiceC": "COBOL",
+      "choiceD": "LISP",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What does RAM stand for?",
+      "choiceA": "Random Access Memory",
+      "choiceB": "Readily Available Memory",
+      "choiceC": "Run All Memory",
+      "choiceD": "Randomly Allocated Memory",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the primary purpose of an operating system?",
+      "choiceA": "To manage computer hardware and software resources",
+      "choiceB": "To perform arithmetic calculations",
+      "choiceC": "To connect to the internet",
+      "choiceD": "To run applications",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which data structure uses LIFO (Last In, First Out) principle?",
+      "choiceA": "Queue",
+      "choiceB": "Stack",
+      "choiceC": "Array",
+      "choiceD": "Linked List",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What does HTTP stand for?",
+      "choiceA": "HyperText Transfer Protocol",
+      "choiceB": "HyperText Transmission Protocol",
+      "choiceC": "HighText Transfer Protocol",
+      "choiceD": "HighText Transmission Protocol",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "In database management, what does SQL stand for?",
+      "choiceA": "Sequential Query Language",
+      "choiceB": "Structured Query Language",
+      "choiceC": "Structured Question Language",
+      "choiceD": "Simple Query Language",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which of the following is not a programming language?",
+      "choiceA": "Python",
+      "choiceB": "Java",
+      "choiceC": "HTML",
+      "choiceD": "Swift",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which company developed the Java programming language?",
+      "choiceA": "Microsoft",
+      "choiceB": "Sun Microsystems",
+      "choiceC": "Apple",
+      "choiceD": "IBM",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What does GUI stand for?",
+      "choiceA": "General User Interface",
+      "choiceB": "Graphical User Interface",
+      "choiceC": "Graphical Utility Interface",
+      "choiceD": "General Utility Interface",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the name of the first computer virus?",
+      "choiceA": "Creeper",
+      "choiceB": "ILOVEYOU",
+      "choiceC": "Melissa",
+      "choiceD": "Code Red",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the main function of the OSI model?",
+      "choiceA": "To manage hardware",
+      "choiceB": "To manage software",
+      "choiceC": "To standardize networking protocols",
+      "choiceD": "To manage memory",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which programming language is primarily used for web development?",
+      "choiceA": "C++",
+      "choiceB": "Python",
+      "choiceC": "JavaScript",
+      "choiceD": "Java",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the purpose of an IP address?",
+      "choiceA": "To identify a computer on a network",
+      "choiceB": "To identify a user",
+      "choiceC": "To identify a software",
+      "choiceD": "To identify a hardware",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Who invented the World Wide Web?",
+      "choiceA": "Steve Jobs",
+      "choiceB": "Bill Gates",
+      "choiceC": "Tim Berners-Lee",
+      "choiceD": "Mark Zuckerberg",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Which of the following is a version control system?",
+      "choiceA": "Git",
+      "choiceB": "FTP",
+      "choiceC": "HTTP",
+      "choiceD": "SMTP",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "choiceA": "Cascading Style Sheets",
+      "choiceB": "Creative Style Sheets",
+      "choiceC": "Computer Style Sheets",
+      "choiceD": "Cascading Simple Sheets",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which company developed the C# programming language?",
+      "choiceA": "Apple",
+      "choiceB": "Google",
+      "choiceC": "Microsoft",
+      "choiceD": "IBM",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the main use of the Python programming language?",
+      "choiceA": "Web development",
+      "choiceB": "Data analysis",
+      "choiceC": "Machine learning",
+      "choiceD": "All of the above",
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What does the acronym 'IDE' stand for in programming?",
+      "choiceA": "Integrated Development Environment",
+      "choiceB": "Internal Development Environment",
+      "choiceC": "Integrated Data Environment",
+      "choiceD": "Internal Data Environment",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Who created the Linux operating system?",
+      "choiceA": "Bill Gates",
+      "choiceB": "Linus Torvalds",
+      "choiceC": "Steve Jobs",
+      "choiceD": "Ken Thompson",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the purpose of a firewall?",
+      "choiceA": "To encrypt data",
+      "choiceB": "To protect a network from unauthorized access",
+      "choiceC": "To store data",
+      "choiceD": "To analyze data",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which of the following is a markup language?",
+      "choiceA": "Python",
+      "choiceB": "HTML",
+      "choiceC": "Java",
+      "choiceD": "C++",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What is the main purpose of the DNS system?",
+      "choiceA": "To manage network connections",
+      "choiceB": "To translate domain names to IP addresses",
+      "choiceC": "To encrypt data",
+      "choiceD": "To store data",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which company developed the Swift programming language?",
+      "choiceA": "Google",
+      "choiceB": "Microsoft",
+      "choiceC": "Apple",
+      "choiceD": "IBM",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the main function of the BIOS in a computer?",
+      "choiceA": "To manage software",
+      "choiceB": "To manage hardware",
+      "choiceC": "To start the operating system",
+      "choiceD": "To manage memory",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What does SSD stand for?",
+      "choiceA": "Solid State Drive",
+      "choiceB": "Super Speed Drive",
+      "choiceC": "System Storage Drive",
+      "choiceD": "Solid System Drive",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which programming language is used for iOS app development?",
+      "choiceA": "Java",
+      "choiceB": "C#",
+      "choiceC": "Swift",
+      "choiceD": "Python",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What does the acronym 'URL' stand for?",
+      "choiceA": "Universal Resource Locator",
+      "choiceB": "Uniform Resource Locator",
+      "choiceC": "Universal Resource Link",
+      "choiceD": "Uniform Resource Link",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Who is known as the 'father of the internet'?",
+      "choiceA": "Tim Berners-Lee",
+      "choiceB": "Vint Cerf",
+      "choiceC": "Steve Jobs",
+      "choiceD": "Bill Gates",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which company developed the Go programming language?",
+      "choiceA": "Apple",
+      "choiceB": "Microsoft",
+      "choiceC": "Google",
+      "choiceD": "IBM",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the primary function of the motherboard in a computer?",
+      "choiceA": "To store data",
+      "choiceB": "To connect all hardware components",
+      "choiceC": "To manage memory",
+      "choiceD": "To manage software",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "What does the acronym 'HTTP' stand for?",
+      "choiceA": "HyperText Transfer Protocol",
+      "choiceB": "HyperText Transmission Protocol",
+      "choiceC": "HyperText Transfer Process",
+      "choiceD": "HyperText Transmission Process",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "Which programming language is known for its use in data science?",
+      "choiceA": "Java",
+      "choiceB": "C++",
+      "choiceC": "Python",
+      "choiceD": "Ruby",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "What is the main function of the GPU in a computer?",
+      "choiceA": "To manage network connections",
+      "choiceB": "To process graphics",
+      "choiceC": "To store data",
+      "choiceD": "To manage memory",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which of the following is a database management system?",
+      "choiceA": "MySQL",
+      "choiceB": "Python",
+      "choiceC": "HTML",
+      "choiceD": "CSS",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What does 'IoT' stand for in technology?",
+      "choiceA": "Internet of Things",
+      "choiceB": "Internet of Technology",
+      "choiceC": "Integration of Technology",
+      "choiceD": "Integration of Things",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the main purpose of a cache in a computer system?",
+      "choiceA": "To store large files",
+      "choiceB": "To speed up data access",
+      "choiceC": "To manage network connections",
+      "choiceD": "To encrypt data",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which company developed the Ruby programming language?",
+      "choiceA": "Google",
+      "choiceB": "Microsoft",
+      "choiceC": "Apple",
+      "choiceD": "Yukihiro Matsumoto",
+      "correctAnswer": "D"
+    },
+    {
+      "question": "What does the acronym 'JSON' stand for?",
+      "choiceA": "JavaScript Object Notation",
+      "choiceB": "JavaScript Object Network",
+      "choiceC": "JavaScript Online Notation",
+      "choiceD": "JavaScript Online Network",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the purpose of the TCP/IP protocol?",
+      "choiceA": "To manage email communications",
+      "choiceB": "To manage web pages",
+      "choiceC": "To manage data transmission over a network",
+      "choiceD": "To manage file transfers",
+      "correctAnswer": "C"
+    },
+    {
+      "question": "Who developed the PHP programming language?",
+      "choiceA": "Rasmus Lerdorf",
+      "choiceB": "Guido van Rossum",
+      "choiceC": "James Gosling",
+      "choiceD": "Dennis Ritchie",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What does the acronym 'ASCII' stand for?",
+      "choiceA": "American Standard Code for Information Interchange",
+      "choiceB": "American Standard Code for Internet Interchange",
+      "choiceC": "American Standard Code for International Interchange",
+      "choiceD": "American Standard Code for Internal Interchange",
+      "correctAnswer": "A"
+    },
+    {
+      "question": "What is the main function of an API?",
+      "choiceA": "To provide a user interface",
+      "choiceB": "To connect different software applications",
+      "choiceC": "To manage memory",
+      "choiceD": "To encrypt data",
+      "correctAnswer": "B"
+    },
+    {
+      "question": "Which company developed the TypeScript programming language?",
+      "choiceA": "Google",
+      "choiceB": "Microsoft",
+      "choiceC": "Apple",
+      "choiceD": "IBM",
+      "correctAnswer": "B"
+    }
+  ]
+}

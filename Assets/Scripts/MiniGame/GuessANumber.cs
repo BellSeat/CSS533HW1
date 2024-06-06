@@ -56,10 +56,32 @@ public class GuessANumber : MonoBehaviour
 
     public void SubmitButtonClicked()
     {
-        Debug.Log("Submit Button Clicked");
-        int guess = int.Parse(inputField.text);
-        ifTheAnswer(guess);
+        int guess;
+        if (int.TryParse(inputField.text, out guess))
+        {
+            if (guess >= 1 && guess <= 100)
+            {
+                ifTheAnswer(guess);
+            }
+            else
+            {
+                Debug.Log("Invalid input! The number is not within the range 1-100.");
+                // Handle the case where the number is out of range
+
+                GameResult.color = Color.red;
+                GameResult.text = "Invalid input! The number is not within the range 1-100.";
+            }
+        }
+        else
+        {
+            Debug.Log("Invalid input! Please enter a number.");
+
+            GameResult.color = Color.red;
+            GameResult.text = "Invalid input! Please enter a number.";
+        }
     }
+
+
     public void CloseButtonClicked()
     {
         Debug.Log("Close Button Clicked");

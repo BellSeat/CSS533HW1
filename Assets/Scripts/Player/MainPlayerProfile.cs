@@ -1,53 +1,63 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MainPlayerProfile : MonoBehaviour
 {
-    [SerializeField] private string playerName;
-    [SerializeField] private int playerLevel;
-    [SerializeField] private int playerScore;
-    [SerializeField] private int playerEXP;
+    public static string playerName;
+    public PlayerDataManager playerDataManager;
 
-    bool isPaused = false;
-
-    // Start is called before the first frame update
     void Start()
     {
-        downloadUserProfileFromServer();
+        playerDataManager.currentPlayerData = playerDataManager.GetUserProfile(playerName);
     }
 
-    private void OnGUI()
+    private void OnDestroy()
     {
-        if(isPaused)
+        SaveUserProfile();
+        playerDataManager.SaveAllPlayersData();
+    }
+
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause)
         {
-            GUI.Label(new Rect(10, 10, 100, 20), "Game is paused");
-            uploadUserProfileToServer();
+            SaveUserProfile();
+            playerDataManager.SaveAllPlayersData();
         }
     }
 
-    public void OnApplicationPause(bool pause)
+    private void OnApplicationFocus(bool hasFocus)
     {
-          isPaused = pause;
+        if (!hasFocus)
+        {
+            SaveUserProfile();
+            playerDataManager.SaveAllPlayersData();
+        }
+        else
+        {
+            playerDataManager.LoadAllPlayersData();
+            LoadUserProfile();
+        }
     }
 
-    private void OnApplicationFocus(bool hasFocus){
-
-        isPaused = !hasFocus;
-        downloadUserProfileFromServer();
-
-
+    private void LoadUserProfile()
+    {
+        UserProfile profile = playerDataManager.GetUserProfile(playerName);
+        if (profile != null)
+        {
+            playerDataManager.currentPlayerData = profile;
+        }
+        else
+        {
+            Debug.LogError("User profile not found for: " + playerName);
+        }
     }
 
-    private void uploadUserProfileToServer()
+    private void SaveUserProfile()
     {
-        // upload player profile to server
-
-    }
-
-    private void downloadUserProfileFromServer()
-    {
-        // download player profile from server
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.AddOrUpdateUserProfile(playerDataManager.currentPlayerData);
+        }
     }
 
     public void setPlayerName(string name)
@@ -57,57 +67,80 @@ public class MainPlayerProfile : MonoBehaviour
 
     public void setPlayerLevel(int level)
     {
-        playerLevel = level;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Level = level;
+            SaveUserProfile();
+        }
     }
 
     public void setPlayerScore(int score)
     {
-        playerScore = score;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Score = score;
+            SaveUserProfile();
+        }
     }
 
     public void setPlayerEXP(int exp)
     {
-        playerEXP = exp;
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Experience = exp;
+            SaveUserProfile();
+        }
     }
 
     public string getPlayerName()
     {
-        return playerName==null? "Sean" : playerName;
+        return playerName;
     }
 
     public int getPlayerLevel()
     {
-        return playerLevel;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Level : 0;
     }
 
     public int getPlayerScore()
     {
-        return playerScore;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Score : 0;
     }
 
     public int getPlayerEXP()
     {
-        return playerEXP;
+        return playerDataManager.currentPlayerData != null ? playerDataManager.currentPlayerData.Experience : 0;
     }
-    public void addPlayerEXP(int exp) { 
-        
-        playerEXP += exp;
-        caculateLevel();
-        uploadUserProfileToServer();
+
+    public void addPlayerEXP(int exp)
+    {
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Experience += exp;
+            calculateLevel();
+            SaveUserProfile();
+        }
     }
 
     public void addPlayerScore(int score)
     {
-        playerScore += score;
-        uploadUserProfileToServer();
+        if (playerDataManager.currentPlayerData != null)
+        {
+            playerDataManager.currentPlayerData.Score += score;
+            SaveUserProfile();
+        }
     }
 
-    private void caculateLevel() {
-        if (this.playerEXP >= 100)
+    private void calculateLevel()
+    {
+        if (playerDataManager.currentPlayerData != null)
         {
-            int add = playerEXP / 100;
-            playerLevel+=add;
-            playerEXP = playerEXP % 100;
+            if (playerDataManager.currentPlayerData.Experience >= 100)
+            {
+                int add = playerDataManager.currentPlayerData.Experience / 100;
+                playerDataManager.currentPlayerData.Level += add;
+                playerDataManager.currentPlayerData.Experience %= 100;
+            }
         }
     }
 }
